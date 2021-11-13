@@ -9,13 +9,13 @@ Main {
     private static int TOTAL_GAMES = 3;
 
 
-    public static void main(String[] args) {
-	// write your code here        \
+    public static void main(String[] args)
+    {
         Scanner input = new Scanner(System.in);
 
         String[] names = {"Angaran", "Taylor", "Tom"};
         String[] players = new String[3];
-        int[][] playerScores = new int[3][TOTAL_ROUNDS];
+        //int[][] playerScores = new int[3][TOTAL_ROUNDS];
 
        /* for (int i = 0; i < names.length; i++) {
             System.out.println("Please enter the score for "+ names[i] + game[]);
@@ -23,8 +23,10 @@ Main {
         boolean isTrue = false;
         while (!isTrue) {
             /* Loop through each player, for 10 rounds each */
-            for (int i = 0; i <= TOTAL_GAMES; i++) {
-                for (int count = 1; count <= TOTAL_ROUNDS ; count++) {
+            for (int i = 0; i <= TOTAL_GAMES; i++)
+            {
+                for (int count = 1; count <= TOTAL_ROUNDS ; count++)
+                {
 
                     try {
                         int score = 0;
@@ -43,9 +45,6 @@ Main {
                         input.nextLine();
                         isTrue = false;
                     }
-
-
-
                 }
             }
         }
