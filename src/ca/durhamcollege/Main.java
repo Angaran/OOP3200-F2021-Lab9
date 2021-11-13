@@ -8,6 +8,8 @@ public class
 Main {
     private static int TOTAL_ROUNDS = 10;
     private static int TOTAL_GAMES = 3;
+    private static int score = 0;
+    private static int sum = 0;
 
 
     public static void main(String[] args)
@@ -28,8 +30,6 @@ Main {
                 for (int count = 1; count <= TOTAL_ROUNDS ; count++) {
 
                     try {
-                        int score = 0;
-                        int sum = 0;
                         //System.out.print("Please enter the score for" + players[count] + " : ");
                         System.out.print("Please enter the score for " + names[i] + " in round" + count);
                         score = input.nextInt();
