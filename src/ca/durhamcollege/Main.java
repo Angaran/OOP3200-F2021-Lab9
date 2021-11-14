@@ -23,17 +23,21 @@ Main {
         boolean isTrue = false;
         while (!isTrue) {
             /* Loop through each player, for 10 rounds each */
-            for (int p = 0; p <= TOTAL_PLAYERS; p++) {
-                for (int count = 1; count <= TOTAL_ROUNDS; count++) {
-
-                    try {
+            for (int p = 0; p <= TOTAL_PLAYERS; p++)
+            {
+                for (int count = 1; count <= TOTAL_ROUNDS; count++)
+                {
+                    try
+                    {
                         // Error output
                         System.out.printf("Please enter the score for " + names[p] + " in round" + count);
                         score = input.nextInt();
 
+
                         isTrue = true;
 
-                        if (score <= 0 || score > 300) {
+                        if (score <= 0 || score > 300)
+                        {
                             // Error output
                             System.out.println("The score must be between 0 and 300");
                             input.nextLine();
@@ -41,17 +45,13 @@ Main {
 
                         } else {
 
+
                             // add score to sum //TODO: iterate through each player instead of suming all players
-                            sum += score;
+                             sum += score;
 
                             // Output of score sum
                             //System.out.println("Sum is : " + sum);
-
-
                         }
-
-
-
                     } catch (InputMismatchException e) {
                         // Error output
                         System.out.println("You must enter a valid integer");
@@ -60,6 +60,7 @@ Main {
                     }
 
                 }
+                // Output of score sum
                 System.out.println("Sum is : " + sum);
 
             }
