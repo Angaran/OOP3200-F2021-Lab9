@@ -1,4 +1,5 @@
 package ca.durhamcollege;
+import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 /*
@@ -6,7 +7,7 @@ import java.util.Scanner;
 *  @author Taylor Bazouzi 100579090
 *  @lastModified November 14, 2021
 *  @Description Java console program that accepts user inputted scores for three players
-*               and then displays the total of each players scores
+*               and then displays the average of each players scores
 *
 * */
 
@@ -16,21 +17,23 @@ Main {
     private static int TOTAL_ROUNDS = 2;
     private static int TOTAL_PLAYERS = 3;
     private static int score = 0;
-    private static int total = 0;
-    private static int sum = 0;
+    private static double average = 0;
+    private static double sum = 0;
 
     public static void main(String[] args) {
+
         Scanner input = new Scanner(System.in);
 
         String[] names = {"Angaran", "Taylor", "Tom"};
+        //int [] scores = new int[2];
 
         /* String[] player = new String[3]; */
 
-        //int[][] playerScores = new int[TOTAL_PLAYERS][TOTAL_ROUNDS];
+        int[][] playerScores = new int[TOTAL_PLAYERS][TOTAL_ROUNDS];
 
         boolean isTrue = false;
         while (!isTrue) {
-            /* Loop through each player, for 10 rounds each */
+            /* Loop through each player, for 2 rounds each */
             for (int p = 0 ; p <= TOTAL_PLAYERS; p++)
             {
                 for (int count = 1; count <= TOTAL_ROUNDS; count++)
@@ -40,7 +43,6 @@ Main {
                         // Error output
                         System.out.printf("Please enter the score for " + names[p] + " in round" + count);
                         score = input.nextInt();
-
                         isTrue = true;
 
                         if (score <= 0 || score > 300)
@@ -51,20 +53,29 @@ Main {
                             isTrue = false;
 
                         } else {
-                             sum += score;
+                            sum += score;
                         }
                     } catch (InputMismatchException e) {
                         // Error output
                         System.out.println("You must enter a valid integer");
                         input.nextLine();
-                        isTrue = false;
+                        //isTrue = true;
                     }
+
                 }
+
+                /*sum += score;*/
+
                 // Output of score average
-                int average = sum / TOTAL_ROUNDS;
+                average = sum / TOTAL_ROUNDS;
+                sum = 0;
                 System.out.println("Average Score: "+ average);
+
                 //System.out.println("Sum is : " + sum);
+
             }
+
         }
+
     }
 }
