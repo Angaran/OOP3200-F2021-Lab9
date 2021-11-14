@@ -25,11 +25,12 @@ Main {
         Scanner input = new Scanner(System.in);
 
         String[] names = {"Angaran", "Taylor", "Tom"};
+
         //int [] scores = new int[2];
 
         /* String[] player = new String[3]; */
 
-        int[][] playerScores = new int[TOTAL_PLAYERS][TOTAL_ROUNDS];
+        /*int[][] playerScores = new int[TOTAL_PLAYERS][TOTAL_ROUNDS];*/
 
         boolean isTrue = false;
         while (!isTrue) {
