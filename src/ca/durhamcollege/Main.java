@@ -42,13 +42,14 @@ Main {
                         } else {
 
                             // add score to sum //TODO: iterate through each player instead of suming all players
-                                sum += score;
+                            sum += score;
 
                             // Output of score sum
-                            System.out.println("Sum is : " + sum);
+                            //System.out.println("Sum is : " + sum);
 
 
                         }
+
 
 
                     } catch (InputMismatchException e) {
@@ -57,7 +58,9 @@ Main {
                         input.nextLine();
                         isTrue = false;
                     }
+
                 }
+                System.out.println("Sum is : " + sum);
 
             }
         }
