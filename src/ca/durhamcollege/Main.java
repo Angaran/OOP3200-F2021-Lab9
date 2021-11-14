@@ -19,7 +19,6 @@ Main {
     private static int total = 0;
     private static int sum = 0;
 
-
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
@@ -27,14 +26,14 @@ Main {
 
         /* String[] player = new String[3]; */
 
-        int[][] playerScores = new int[TOTAL_PLAYERS][TOTAL_ROUNDS];
+        //int[][] playerScores = new int[TOTAL_PLAYERS][TOTAL_ROUNDS];
 
         boolean isTrue = false;
         while (!isTrue) {
             /* Loop through each player, for 10 rounds each */
             for (int p = 0 ; p <= TOTAL_PLAYERS; p++)
             {
-                for (int count = 0+1 ; count <= TOTAL_ROUNDS; count++)
+                for (int count = 1; count <= TOTAL_ROUNDS; count++)
                 {
                     try
                     {
@@ -48,11 +47,10 @@ Main {
                         {
                             // Error output
                             System.out.println("The score must be between 0 and 300");
-                            score = input.nextInt();
+                            input.nextLine();
                             isTrue = false;
 
                         } else {
-
                              sum += score;
                         }
                     } catch (InputMismatchException e) {
